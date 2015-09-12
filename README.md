@@ -195,7 +195,7 @@ before_install: curl -L https://www.getchef.com/chef/install.sh | sudo bash -s -
 gem 'berkshelf', '~> 3.0' # Comes with ChefDK 0.7.0
 ```
 
-The same applies for other gems you have in your Gemfile: Use the version that comes with ChefDK if possible.
+The same applies for other gems you have in your Gemfile: Use the version that comes with ChefDK if possible. If you need gems that conflict with ChefDK, try [this alternatives](#related-projects).
 
 If the error is not due to gems, but a command that can take a long time to run and is very quiet, you may need to run it with some flags to increase verbosity such as: `--verbose`, `--debug`, `--l debug`, ...
 
