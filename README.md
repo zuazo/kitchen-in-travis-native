@@ -19,6 +19,9 @@ env:
 before_install: curl -L https://www.getchef.com/chef/install.sh | sudo bash -s -- -P chefdk -v 0.7.0
 install: chef exec bundle install
 
+# https://github.com/travis-ci/travis-ci/issues/4778
+before_script: sudo iptables -N DOCKER || true
+
 script:
 # Run test-kitchen with docker driver, for example:
 - KITCHEN_LOCAL_YAML=.kitchen.docker.yml chef exec bundle exec kitchen verify ${INSTANCE}
@@ -122,6 +125,9 @@ env:
 
 before_install: curl -L https://www.getchef.com/chef/install.sh | sudo bash -s -- -P chefdk -v 0.7.0
 install: chef exec bundle install --jobs=3 --retry=3
+
+# https://github.com/travis-ci/travis-ci/issues/4778
+before_script: sudo iptables -N DOCKER || true
 
 script: travis_retry chef exec bundle exec rake integration:docker[${INSTANCE}]
 ```
