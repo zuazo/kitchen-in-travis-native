@@ -19,8 +19,8 @@ env:
 before_install: curl -L https://www.getchef.com/chef/install.sh | sudo bash -s -- -P chefdk -v 0.7.0
 install: chef exec bundle install
 
-# https://github.com/travis-ci/travis-ci/issues/4778
-before_script: sudo iptables -N DOCKER || true
+# https://github.com/zuazo/kitchen-in-travis-native/issues/1#issuecomment-142455888
+before_script: sudo iptables -L DOCKER || sudo iptables -N DOCKER
 
 script:
 # Run test-kitchen with docker driver, for example:
@@ -126,8 +126,8 @@ env:
 before_install: curl -L https://www.getchef.com/chef/install.sh | sudo bash -s -- -P chefdk -v 0.7.0
 install: chef exec bundle install --jobs=3 --retry=3
 
-# https://github.com/travis-ci/travis-ci/issues/4778
-before_script: sudo iptables -N DOCKER || true
+# https://github.com/zuazo/kitchen-in-travis-native/issues/1#issuecomment-142455888
+before_script: sudo iptables -L DOCKER || sudo iptables -N DOCKER
 
 script: travis_retry chef exec bundle exec rake integration:docker[${INSTANCE}]
 ```
@@ -280,6 +280,7 @@ See [here](https://github.com/zuazo/docker-in-travis#acknowledgements) for more.
 |                      |                                          |
 |:---------------------|:-----------------------------------------|
 | **Author:**          | [Xabier de Zuazo](https://github.com/zuazo) (<xabier@zuazo.org>)
+| **Contributor:**     | [Irving Popovetsky](https://github.com/irvingpop)
 | **Copyright:**       | Copyright (c) 2015, Xabier de Zuazo
 | **License:**         | Apache License, Version 2.0
 
