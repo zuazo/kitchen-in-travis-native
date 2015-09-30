@@ -16,7 +16,7 @@ env:
   - INSTANCE=default-ubuntu-1404
   - INSTANCE=default-centos-66
 
-before_install: curl -L https://www.getchef.com/chef/install.sh | sudo bash -s -- -P chefdk -v 0.7.0
+before_install: curl -L https://www.getchef.com/chef/install.sh | sudo bash -s -- -P chefdk -v 0.8.0
 install: chef exec bundle install
 
 # https://github.com/zuazo/kitchen-in-travis-native/issues/1#issuecomment-142455888
@@ -123,7 +123,7 @@ env:
   - INSTANCE=default-ubuntu-1404
   - INSTANCE=default-centos-66
 
-before_install: curl -L https://www.getchef.com/chef/install.sh | sudo bash -s -- -P chefdk -v 0.7.0
+before_install: curl -L https://www.getchef.com/chef/install.sh | sudo bash -s -- -P chefdk -v 0.8.0
 install: chef exec bundle install --jobs=3 --retry=3
 
 # https://github.com/zuazo/kitchen-in-travis-native/issues/1#issuecomment-142455888
@@ -137,10 +137,10 @@ If you are using a *Gemfile*, you should add the following to it:
 ```ruby
 # Gemfile
 
-gem 'berkshelf', '~> 3.0'
+gem 'berkshelf', '~> 3.3'
 
 group :integration do
-  gem 'test-kitchen', '~> 1.2'
+  gem 'test-kitchen', '~> 1.4'
 end
 
 group :docker do
@@ -193,12 +193,12 @@ For example:
 
 ```yaml
 # .travis.yml
-before_install: curl -L https://www.getchef.com/chef/install.sh | sudo bash -s -- -P chefdk -v 0.7.0
+before_install: curl -L https://www.getchef.com/chef/install.sh | sudo bash -s -- -P chefdk -v 0.8.0
 ```
 
 ```ruby
 # Gemfile
-gem 'berkshelf', '~> 3.0' # Comes with ChefDK 0.7.0
+gem 'berkshelf', '~> 3.3' # Comes with ChefDK 0.8.0
 ```
 
 The same applies for other gems you have in your Gemfile: Use the version that comes with ChefDK if possible. If you need gems that conflict with ChefDK, try [this alternatives](#related-projects).

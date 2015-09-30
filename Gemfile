@@ -4,10 +4,10 @@
 source 'https://rubygems.org'
 
 gem 'rake'
-gem 'berkshelf', '~> 3.0' # Comes with ChefDK 0.7.0
+gem 'berkshelf', '~> 3.3' # Comes with ChefDK 0.8.0
 
 group :integration do
-  gem 'test-kitchen', '~> 1.2'
+  gem 'test-kitchen', '~> 1.4'
 end
 
 group :vagrant do
