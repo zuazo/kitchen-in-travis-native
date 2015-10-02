@@ -71,6 +71,7 @@ First, create a `.kitchen.docker.yml` file with the platforms you want to test:
 ---
 driver:
   name: docker
+  privileged: true
 
 platforms:
 - name: centos-6.6
@@ -153,6 +154,17 @@ end
 * [supermarket-omnibus](https://github.com/chef-cookbooks/supermarket-omnibus-cookbook) cookbook ([*.travis.yml*](https://github.com/chef-cookbooks/supermarket-omnibus-cookbook/blob/master/.travis.yml), [*.kitchen.docker.yml*](https://github.com/chef-cookbooks/supermarket-omnibus-cookbook/blob/master/.kitchen.docker.yml).
 
 ## Known Issues
+
+### Privileged Containers
+
+It's recommended to run the containers in privileged mode to avoid some weird errors when starting system services or when running Serverspec tests.
+
+```yaml
+---
+driver:
+  name: docker
+  privileged: true
+```
 
 ### The Test Cannot Exceed 50 Minutes
 

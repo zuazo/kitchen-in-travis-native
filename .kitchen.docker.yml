@@ -1,6 +1,7 @@
 ---
 driver:
   name: docker
+  privileged: true
 
 # platforms:
 # - name: ubuntu-14.04
