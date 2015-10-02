@@ -148,6 +148,10 @@ group :docker do
 end
 ```
 
+## Real-world Examples
+
+* [supermarket-omnibus](https://github.com/chef-cookbooks/supermarket-omnibus-cookbook) cookbook ([*.travis.yml*](https://github.com/chef-cookbooks/supermarket-omnibus-cookbook/blob/master/.travis.yml), [*.kitchen.docker.yml*](https://github.com/chef-cookbooks/supermarket-omnibus-cookbook/blob/master/.kitchen.docker.yml).
+
 ## Known Issues
 
 ### The Test Cannot Exceed 50 Minutes
