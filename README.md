@@ -153,6 +153,8 @@ end
 
 * [supermarket-omnibus](https://github.com/chef-cookbooks/supermarket-omnibus-cookbook) cookbook ([*.travis.yml*](https://github.com/chef-cookbooks/supermarket-omnibus-cookbook/blob/master/.travis.yml), [*.kitchen.docker.yml*](https://github.com/chef-cookbooks/supermarket-omnibus-cookbook/blob/master/.kitchen.docker.yml).
 
+* [owncloud](https://github.com/zuazo/owncloud-cookbook) cookbook ([*.travis.yml*](https://github.com/zuazo/owncloud-cookbook/blob/master/.travis.yml), [*.kitchen.docker.yml*](https://github.com/zuazo/owncloud-cookbook/blob/master/.kitchen.docker.yml), [*Rakefile*](https://github.com/zuazo/owncloud-cookbook/blob/master/Rakefile)): Runs kitchen tests against many platforms. Includes Serverspec tests using [infrataster](https://github.com/ryotarai/infrataster).
+
 ## Known Issues
 
 ### Privileged Containers
