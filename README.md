@@ -299,6 +299,7 @@ See [here](https://github.com/zuazo/docker-in-travis#acknowledgements) for more.
 |:---------------------|:-----------------------------------------|
 | **Author:**          | [Xabier de Zuazo](https://github.com/zuazo) (<xabier@zuazo.org>)
 | **Contributor:**     | [Irving Popovetsky](https://github.com/irvingpop)
+| **Contributor:**     | [Tim Smith](https://github.com/tas50)
 | **Copyright:**       | Copyright (c) 2015, Xabier de Zuazo
 | **License:**         | Apache License, Version 2.0
 
