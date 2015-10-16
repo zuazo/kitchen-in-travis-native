@@ -16,7 +16,7 @@ env:
   - INSTANCE=default-ubuntu-1404
   - INSTANCE=default-centos-66
 
-before_install: curl -L https://www.getchef.com/chef/install.sh | sudo bash -s -- -P chefdk -v 0.8.0
+before_install: curl -L https://www.getchef.com/chef/install.sh | sudo bash -s -- -P chefdk -v 0.9.0
 install: chef exec bundle install
 
 # https://github.com/zuazo/kitchen-in-travis-native/issues/1#issuecomment-142455888
@@ -124,7 +124,7 @@ env:
   - INSTANCE=default-ubuntu-1404
   - INSTANCE=default-centos-66
 
-before_install: curl -L https://www.getchef.com/chef/install.sh | sudo bash -s -- -P chefdk -v 0.8.0
+before_install: curl -L https://www.getchef.com/chef/install.sh | sudo bash -s -- -P chefdk -v 0.9.0
 install: chef exec bundle install --jobs=3 --retry=3
 
 # https://github.com/zuazo/kitchen-in-travis-native/issues/1#issuecomment-142455888
@@ -138,7 +138,7 @@ If you are using a *Gemfile*, you should add the following to it:
 ```ruby
 # Gemfile
 
-gem 'berkshelf', '~> 3.3'
+gem 'berkshelf', '~> 4.0'
 
 group :integration do
   gem 'test-kitchen', '~> 1.4'
@@ -211,12 +211,12 @@ For example:
 
 ```yaml
 # .travis.yml
-before_install: curl -L https://www.getchef.com/chef/install.sh | sudo bash -s -- -P chefdk -v 0.8.0
+before_install: curl -L https://www.getchef.com/chef/install.sh | sudo bash -s -- -P chefdk -v 0.9.0
 ```
 
 ```ruby
 # Gemfile
-gem 'berkshelf', '~> 3.3' # Comes with ChefDK 0.8.0
+gem 'berkshelf', '~> 4.0' # Comes with ChefDK 0.9.0
 ```
 
 The same applies for other gems you have in your Gemfile: Use the version that comes with ChefDK if possible. If you need gems that conflict with ChefDK, try [this alternatives](#related-projects).
@@ -305,9 +305,9 @@ See [here](https://github.com/zuazo/docker-in-travis#acknowledgements) for more.
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
-    
+
         http://www.apache.org/licenses/LICENSE-2.0
-    
+
     Unless required by applicable law or agreed to in writing, software
     distributed under the License is distributed on an "AS IS" BASIS,
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.

@@ -4,7 +4,7 @@
 source 'https://rubygems.org'
 
 gem 'rake'
-gem 'berkshelf', '~> 3.3' # Comes with ChefDK 0.8.0
+gem 'berkshelf', '~> 4.0' # Comes with ChefDK 0.9.0
 
 group :integration do
   gem 'test-kitchen', '~> 1.4'
