@@ -155,6 +155,8 @@ end
 
 * [owncloud](https://github.com/zuazo/owncloud-cookbook) cookbook ([*.travis.yml*](https://github.com/zuazo/owncloud-cookbook/blob/master/.travis.yml), [*.kitchen.docker.yml*](https://github.com/zuazo/owncloud-cookbook/blob/master/.kitchen.docker.yml), [*Rakefile*](https://github.com/zuazo/owncloud-cookbook/blob/master/Rakefile)): Runs kitchen tests against many platforms. Includes Serverspec tests using [infrataster](https://github.com/ryotarai/infrataster).
 
+* [mysql_tuning](https://github.com/zuazo/mysql_tuning-cookbook) cookbook ([*.travis.yml*](https://github.com/zuazo/mysql_tuning-cookbook/blob/master/.travis.yml), [*.kitchen.docker.yml*](https://github.com/zuazo/mysql_tuning-cookbook/blob/master/.kitchen.docker.yml), [*Rakefile*](https://github.com/zuazo/mysql_tuning-cookbook/blob/master/Rakefile)): Runs kitchen tests against many platforms. Includes Serverspec tests.
+
 ## Known Issues
 
 ### Privileged Containers
